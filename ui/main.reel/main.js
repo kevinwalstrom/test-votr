@@ -13,5 +13,17 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         value: function Main() {
             this.super();
         }
+    },
+
+    states: {
+    	value : [
+			{name: "Alabama", code: "AL" },
+			{name: "Alaska", code: "AK"},
+			{name: "Arizona", code: "AZ"},
+			{name: "Arkansas", code: "AR"},
+			{name: "Wyoming", code: "WY"}
+		]
     }
+    
+
 });
