@@ -3,6 +3,7 @@
  * @requires montage/ui/component
  */
 var Component = require("montage/ui/component").Component;
+var Montage = require("montage/core/core").Montage;
 
 /**
  * @class Main
@@ -14,16 +15,44 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             this.super();
         }
     },
+    content: {
+        value: null
+    },
 
-    states: {
-    	value : [
-			{name: "Alabama", code: "AL" },
-			{name: "Alaska", code: "AK"},
-			{name: "Arizona", code: "AZ"},
-			{name: "Arkansas", code: "AR"},
-			{name: "Wyoming", code: "WY"}
-		]
+    sidebar: {
+        value: null
+    },
+
+    // content.selectedItem and sidebar.selectedItem are bound to selectedItem
+    _selectedItem: {value: null},
+    selectedItem: {
+        get: function() {return this._selectedItem;},
+        set: function(value) {this._selectedItem = value; this.needsDraw = true;}
+    },
+
+    templateDidLoad: {
+        value: function() {
+            console.log("main templateDidLoad");
+        }
+    },
+
+    deserializedFromTemplate: {
+        value: function() {
+            console.log("main deserializedFromTemplate");
+        }
+    },
+
+    draw: {
+        value: function() {
+            console.log('main draw');
+        }
+    },
+
+    didDraw: {
+        value: function() {
+            console.log('main didDraw');
+        }
     }
-    
+
 
 });

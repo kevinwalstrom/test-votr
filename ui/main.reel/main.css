@@ -18,3 +18,18 @@ body {
 .Title {
     font-size: 1.3em;
 }
+
+.nav-button {
+    outline: none;
+    box-sizing: border-box;
+    font-size: 12px;
+    height: 2.5em;
+    min-width: 10.5em;
+    margin: 0 2px;
+    padding: 0 1em;
+    vertical-align: middle;
+    border-radius: 3px;
+    border: 1px solid #b3b3b3;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}

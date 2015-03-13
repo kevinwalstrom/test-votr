@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="content.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "content"},
+                "contentDeck": {"@": "placeholder"}
+            }
+        },
+        "placeholder": {
+            "prototype": "montage/ui/substitution.reel",
+            "properties": {
+                "element": {"#": "placeholder"},
+                "switchComponents": {
+                    "toggleButton": {"@": "people"}
+                 },
+                "delegate": {"@": "owner"}
+            }
+        },
+        "people" : {
+            "prototype": "ui/people.reel",
+            "properties": {
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="content" class="content">
+        <h5 class="firstrun">← Please select a Component</h5>
+        <div data-montage-id="placeholder" class="content"></div>
+    </div>
+</body>
+</html>
