@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="main-navbar.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "login": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "label": "Login",
+                "enabled": true,
+                "element": {"#": "login"}
+            }
+        },
+        "people": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "label": "People",
+                "enabled": true,
+                "element": {"#": "people"}
+            }
+        },
+        "leagues": {
+            "prototype": "matte/ui/button.reel",
+            "properties": {
+                "label": "Leagues",
+                "enabled": true,
+                "element": {"#": "leagues"}
+            }
+        }
+        
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="main-navbar container">
+        <div class="row">
+            <div class="col-xs-4 navbar" data-montage-id="navbar">
+                <button class="nav-button btn-block" data-montage-id="login"></button>
+            </div>
+            <div class="col-xs-4 navbar" data-montage-id="navbar">
+                <button class="nav-button btn-block" data-montage-id="people"></button>
+            </div>
+            <div class="col-xs-4 navbar" data-montage-id="navbar">
+                <button class="nav-button btn-block" data-montage-id="leagues"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 content" data-montage-id="content">
+                <h2>Main content</h2>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>
