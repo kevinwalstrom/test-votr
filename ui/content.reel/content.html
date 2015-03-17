@@ -5,34 +5,36 @@
     <link rel="stylesheet" type="text/css" href="content.css">
     <script type="text/montage-serialization">
     {
-        "owner": {
-            "properties": {
-                "element": {"#": "content"},
-                "contentDeck": {"@": "placeholder"}
-            }
-        },
-        "placeholder": {
+         "substitution": {
+            "element": {"#": "substitution"},
             "prototype": "montage/ui/substitution.reel",
             "properties": {
-                "element": {"#": "placeholder"},
-                "switchComponents": {
-                    "toggleButton": {"@": "people"}
-                 },
-                "delegate": {"@": "owner"}
+                "element": {"#": "substitution"},
+                "switchValue": "people"
             }
         },
-        "people" : {
+        "peoplePanel" : {
             "prototype": "ui/people.reel",
             "properties": {
             }
+        },
+        "owner": {
+            "properties": {
+                "element": {"#": "content"},
+                "contentDeck": {"@": "substitution"}
+            }
         }
+
     }
     </script>
 </head>
 <body>
     <div data-montage-id="content" class="content">
-        <h5 class="firstrun">← Please select a Component</h5>
-        <div data-montage-id="placeholder" class="content"></div>
+        <div data-montage-id="substitution">
+            <div data-arg="people" data-montage-id="peoplePanel"></div>
+            <div data-arg="contacts" data-montage-id="contactsPanel"></div>
+            <div data-arg="review" data-montage-id="reviewPanel"></div>
+        </div>
     </div>
 </body>
 </html>

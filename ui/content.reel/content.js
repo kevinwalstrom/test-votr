@@ -21,13 +21,14 @@ exports.Content = Component.specialize(/** @lends Content# */ {
         value: null
     },
 
-    _selectedItem: {value: null},
-    selectedItem: {
+    _switchValue: {value: null},
+    switchValue: {
         get: function() {
-            return this._selectedItem;
+            return this._switchValue;
         },
         set: function(value) {
-            this._selectedItem = value;
+            console.log('switchValue'+ value);
+            this._switchValue = value;
             this.needsDraw = true;
         }
     },
@@ -35,7 +36,9 @@ exports.Content = Component.specialize(/** @lends Content# */ {
     slotDidSwitchContent: {
         value: function(substitution, nodeShown, componentShown, nodeHidden, componentHidden) {
             console.log('substitution did switch content');
-            debugger;               
+            console.log('componentShown' + componentShown);
+            console.log('nodeShown' + nodeShown);
+            debugger;
             if(componentHidden && typeof componentHidden.didBecomeInactiveInSlot === 'function') {
                 componentHidden.didBecomeInactiveInSlot();
             }
